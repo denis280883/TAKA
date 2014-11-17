@@ -27,6 +27,9 @@ TKArchitecture::Application.routes.draw do
   #     end
   #   end
 
+root to: 'static_pages#home'
+
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
