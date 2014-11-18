@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  navigation:
+    home: "Home"
+    about: "About"
+    projects: "Projects"
+    management: "Management"
+    contacts: "Contacts"
+
+
   hello: "Hello world"
   hello_world: Hello world en!
   hello_flash: Hello flash en!
