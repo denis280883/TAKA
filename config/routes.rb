@@ -58,9 +58,6 @@ TKArchitecture::Application.routes.draw do
   #     resources :products
   #   end
 
-  #scope "(:locale)", :locale => /en|fr|ar/ do
-  #  root :to => 'static_pages#home'
-  #end
 
 
 
