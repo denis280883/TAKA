@@ -57,4 +57,11 @@ root to: 'static_pages#home'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  scope "(:locale)", locale: /en|fr/ do
+    resources :books
+  end
+
+
+
 end
