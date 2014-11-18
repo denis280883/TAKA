@@ -27,7 +27,7 @@ TKArchitecture::Application.routes.draw do
   #     end
   #   end
 
-root to: 'static_pages#home'
+  #root to: 'static_pages#home'
 
 
   # Example resource route with sub-resources:
@@ -58,8 +58,8 @@ root to: 'static_pages#home'
   #     resources :products
   #   end
 
-  scope "(:locale)", locale: /en|fr/ do
-    resources :books
+  scope "(:locale)", :locale => /en|fr|ar/ do
+    root :to => 'static_pages#home'
   end
 
 
