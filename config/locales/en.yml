@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  hello_world: Hello world!
+  hello_flash: Hello flash!
