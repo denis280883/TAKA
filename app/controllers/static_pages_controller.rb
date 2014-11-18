@@ -4,6 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    flash[:notice] = "Hello Flash home"
+    flash[:notice] = t(:hello_flash)
   end
 end
