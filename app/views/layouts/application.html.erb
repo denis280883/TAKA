@@ -9,20 +9,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/">Demarrage</a>
+          <a class="brand" href="/">Accueil</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
-                <a href="/films">Liste des films</a>
+                <a href="/abouts">Profil</a>
               </li>
               <li class="">
-                <a href="/langues">Langues</a>
+                <a href="/projects">Projets</a>
               </li>
               <li class="">
-                <a href="/sous_titrages/new">Ajout de Sous-Titrage</a>
+                <a href="/sous_titrages/new">Pilotage</a>
               </li>
               <li class="active">
-                <a href="/vocabulaires">Lecon de vocabulaire</a>
+                <a href="/contacts">Contacts</a>
               </li>
             </ul>
           </div>
@@ -39,17 +39,27 @@
     <meta name="description" content="">
     <meta name="author" content="Denis ING">
 
-
-
-
-
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-</head>
-<body>
+    <%= yield(:head) %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div id="main" role="main">
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span12">
 
-</body>
+              <%= yield %>
+            </div>
+          </div>
+          <footer>
+          </footer>
+        </div>
+      </div> <!--! end of .container -->
+    </div> <!--! end of #main -->
+
+  </body>
 </html>
