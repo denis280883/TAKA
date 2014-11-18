@@ -45,6 +45,14 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <p>
+    <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+    <%= link_to_unless I18n.locale == :fr, "Français", locale: :fr %>
+    <%= link_to_unless I18n.locale == :ar, "العربية", locale: :ar%>
+    </p>
+
+
+
 
     <div id="main" role="main">
       <div class="container">
