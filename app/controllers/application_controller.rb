@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   private
-
   def extract_locale_from_accept_language_header
-    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+    params[:locale] || request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+    
   end
 
   def set_locale
