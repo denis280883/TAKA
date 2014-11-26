@@ -1,0 +1,37 @@
+<!-- app/views/users/new.html.erb -->
+
+<h1><%= t 'session_user.signup' %></h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+
+  <div class="field">
+    <%=f.label :username, t('session_user.user') %>
+    <%= f.text_field :username %> 
+  </div>
+  <div class="field">
+    <%=f.label :lastname, t('session_user.last_name') %>
+    <%=f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%=f.label :firstname, t('session_user.first_name') %>
+    <%=f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%=f.label :email, t('session_user.email') %>
+    <%=f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%=f.label :password, t('session_user.password') %>
+    <%=f.password_field :password %>
+  </div>
+  <div class="field">
+    <%=f.label :password_confirmation, t('session_user.password_confirmation') %>
+    <%=f.password_field :password_confirmation %> 
+  </div>
+  <div class="actions">
+    <%=f.submit t('session_user.signmeup') %>
+  </div>
+
+<% end %>
