@@ -27,7 +27,21 @@ ar:
     management: "إدارة"
     contacts: "نبذة عنا"
 
+  session_user:
+    signup: "إنشاء حساب"
+    signin: "تسجيل الدخول"
+    user: "اسم المستخدم"
+    email: "عنوان البريد الإلكتروني"
+    password: "كلمة المرور"
+    password_confirmation: "كرر كلمة المرور"
+    first_name: "الاسم الأول"
+    last_name: "الاسم الأخير"
+    describe: "وصف"
+    signmein: "تسجيل الدخول"
+    signmeup: "فتح حساب في فيس بوك"
 
+  directionstring: "rtl"
+    
   hello: "Bonjour le monde"
   hello_world: Bonjour le monde !
   hello_flash: Bonjour Flash !

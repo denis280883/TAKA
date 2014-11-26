@@ -1,5 +1,20 @@
 <!DOCTYPE html>
-<html>
+<div id="myDiv0">
+<html lang=<%= locale %> dir=<%= t('directionstring') %>>
+
+<p id="direction_locale" style="display:none;"><%=t('directionstring')%></p>
+  
+
+<script>
+  // refresh page when arabic or european language
+  var elm = document.getElementById('myDiv0') || document.body;
+  var dir1 = window.getComputedStyle(elm).direction;
+  var div = document.getElementById('direction_locale');
+  var dir2 = div.innerText;
+  if (dir1 != dir2)
+    window.location.reload();
+</script>
+
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -51,7 +66,19 @@
     <%= link_to_unless I18n.locale == :ar, "العربية", locale: :ar%>
     </p>
 
+    <div id="user_nav">
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log out", log_out_path %>
+      <% else %>
+        <%= link_to "Sign up", sign_up_path %> or
+        <%= link_to "log in", log_in_path %>
+      <% end %>
+    </div>
 
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
 
 
     <div id="main" role="main">
@@ -71,3 +98,4 @@
 
   </body>
 </html>
+</div>

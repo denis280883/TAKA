@@ -27,6 +27,20 @@ en:
     management: "Management"
     contacts: "Contacts"
 
+  session_user:
+    signup: "Sign up:"
+    signin: "Sign in:"
+    user: "Username:"
+    email: "Email address:"
+    password: "Password:"
+    password_confirmation: "Repeat password:"
+    first_name: "First name:"
+    last_name: "Last Name:"
+    describe: "Describe:"
+    signmein: "Sign me in"
+    signmeup: "Sign Up"
+
+  directionstring: "ltr"
 
   hello: "Hello world"
   hello_world: Hello world en!

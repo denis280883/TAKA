@@ -19,7 +19,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-fr:
+fr:    
   navigation:
     home: "Accueil"
     about: "Profil"
@@ -27,6 +27,20 @@ fr:
     management: "Pilotage"
     contacts: "Contacts"
 
+  session_user:
+    signup: "Créer un compte !"
+    signin: "Ouvrir une session !"
+    user: "Identifiant:"
+    email: "Adresse électronique:"
+    password: "Mot de passe:"
+    password_confirmation: "Confirmer le mot de passe:"
+    first_name: "Prénom:"
+    last_name: "Nom de famille:"
+    describe: "Description:"
+    signmein: "Se connecter"
+    signmeup: "S'enregistrer"
+
+  directionstring: "ltr"
 
   hello: "Bonjour le monde"
   hello_world: Bonjour le monde !
