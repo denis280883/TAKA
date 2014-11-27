@@ -76,7 +76,7 @@ TKArchitecture::Application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
 
   #root :to => "users#new"
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :index]
   resources :sessions, only: [:new, :create, :destroy]
 
 end

@@ -2,11 +2,11 @@
 <p><%= flash[:notice] %></p>
 <%= form_for :session, url: sessions_path do |f| %>
     <div class="field">
-      <%= f.label :email %>
+      <%= f.label :email, t('session_user.email') %>
       <%= f.text_field :email %>
     </div>
     <div class="field">
-      <%= f.label :password %>
+      <%= f.label :password, t('session_user.password') %>
       <%= f.password_field :password %>
     </div>
     <div class="actions"><%= f.submit :login %></div>

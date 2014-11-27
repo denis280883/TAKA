@@ -7,11 +7,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
+    if (@user = User.new(params[:user])).save
       redirect_to root_url, notice: "Signed up!"
     else
-      flash[:notice] = I18n.locale
       render :new
     end
   end
@@ -19,6 +17,5 @@ class UsersController < ApplicationController
   def set_locale
     I18n.locale =  params[:locale]
     I18n.default_locale = I18n.locale 
-    flash[:notice] = I18n.locale
   end
 end
