@@ -2,7 +2,6 @@
 <html lang=<%= locale %> dir=<%= t('directionstring') %>>
 
 <p id="direction_locale" style="display:none;"><%=t('directionstring')%></p>
-<p id="lang"             style="display:none;"><%=t('lang')%></p> 
 <script>
   // refresh page when arabic or european language
   var elm = document.body;
@@ -11,20 +10,6 @@
   var dir2 = div.innerText;
   if (dir1 != dir2)
     window.location.reload();
-
-  var el2 = document.body;
-  var lang = document.getElementById('lang').innerText;
-  //alert(lang);
-
-  var language = document.getElementsByTagName("html")[0].getAttribute("lang");
-  //if (lang != language)
-  //  window.location.reload();
-
-  //alert(language);
-
-
-
-
 </script>
 
 
