@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_filter :set_locale
+
   def new
   end
 
@@ -16,4 +18,10 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
   end
+
+  def set_locale
+    I18n.locale =  params[:locale]
+    I18n.default_locale = I18n.locale
+  end
+
 end
