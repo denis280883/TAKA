@@ -26,7 +26,7 @@ test:
   database: TKArchitecture_test
   pool: 5
   username: root
-  password:
+  password: denis
   host: localhost
 
 production:
@@ -35,5 +35,5 @@ production:
   database: TKArchitecture_production
   pool: 5
   username: root
-  password:
+  password: denis
   host: localhost

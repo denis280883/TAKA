@@ -41,6 +41,7 @@ ar:
     signmeup: "فتح حساب في فيس بوك"
 
   directionstring: "rtl"
+  lang: "ar"
     
   hello: "Bonjour le monde"
   hello_world: Bonjour le monde !

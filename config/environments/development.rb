@@ -6,8 +6,11 @@ TKArchitecture::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # Log error messages when you accidentally call methods on nil.
+  #config.whiny_nils = true
+
   # Do not eager load code on boot.
-  config.eager_load = false
+  #config.eager_load = false
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -19,8 +22,18 @@ TKArchitecture::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  # Only use best-standards-support built into browsers
+  config.action_dispatch.best_standards_support = :builtin
+
+  # Raise exception on mass assignment protection for Active Record models
+  config.active_record.mass_assignment_sanitizer = :strict
+
+
   # Raise an error on page load if there are pending migrations
-  config.active_record.migration_error = :page_load
+  #config.active_record.migration_error = :page_load
+
+  # Do not compress assets
+  #config.assets.compress = false
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large

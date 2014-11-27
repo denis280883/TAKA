@@ -41,6 +41,7 @@ en:
     signmeup: "Sign Up"
 
   directionstring: "ltr"
+  lang: "en"
 
   hello: "Hello world"
   hello_world: Hello world en!

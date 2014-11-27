@@ -41,6 +41,7 @@ fr:
     signmeup: "S'enregistrer"
 
   directionstring: "ltr"
+  lang: "fr"
 
   hello: "Bonjour le monde"
   hello_world: Bonjour le monde !

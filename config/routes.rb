@@ -1,5 +1,11 @@
 TKArchitecture::Application.routes.draw do
-  get "static_pages/home"
+  #get "users/new"
+  #get "users/create"
+  #get "sessions/new"
+  #get "sessions/create"
+  #get "sessions/destroy"
+  #get "home/show"
+  #get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -27,7 +33,12 @@ TKArchitecture::Application.routes.draw do
   #     end
   #   end
 
-  root to: 'static_pages#home'
+  # Me OLD
+  #resource :static_pages, only: [:home]
+  #root to: 'static_pages#home'
+
+  resource :home, only: [:show]
+  root to: "home#show"
 
 
   # Example resource route with sub-resources:
@@ -60,12 +71,12 @@ TKArchitecture::Application.routes.draw do
 
 
   # Sessions Users
-  get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#_form", :as => "log_in"
+  get "login" => "sessions#new", :as => "login"
   get "sign_up" => "users#new", :as => "sign_up"
-  #root :to => "users#new"
-  resources :users
-  resources :sessions
+  get "logout" => "sessions#destroy", :as => "logout"
 
+  #root :to => "users#new"
+  resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
 
 end
