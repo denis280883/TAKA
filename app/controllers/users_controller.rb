@@ -11,12 +11,14 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url, notice: "Signed up!"
     else
-      flash[:notice] = "Invalid !!!!"
+      flash[:notice] = I18n.locale
       render :new
     end
   end
 
   def set_locale
     I18n.locale =  params[:locale]
+    I18n.default_locale = I18n.locale 
+    flash[:notice] = I18n.locale
   end
 end
