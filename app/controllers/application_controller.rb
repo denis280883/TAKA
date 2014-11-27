@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
 
   private
   def extract_locale_from_accept_language_header
-    params[:locale] || request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+    begin
+      params[:locale] || request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+    rescue
+      'en'
+    end  
   end
 
   def set_locale
